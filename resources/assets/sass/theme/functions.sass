@@ -1,0 +1,16 @@
+@function color($key)
+  @if not map-has-key($colors, $key)
+    @warn "Key `#{$key}` not found in $colors map."
+  @return map-get($colors, $key)
+
+
+@function metrics($key)
+  @if not map-has-key($metrics, $key)
+    @warn "Key `#{$key}` not found in $metrics map."
+  @return map-get($metrics, $key)
+
+
+@function images($key)
+  @if not map-has-key($image, $key)
+    @warn "Key `#{$key}` not found in $image map."
+  @return map-get($image, $key)
